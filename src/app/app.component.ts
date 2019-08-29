@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Parcial2808';
+  email = 'andresf-largor@unilibre.edu.co';
+  name = 'Andrés Felipe Largo Rodríguez';
 }
