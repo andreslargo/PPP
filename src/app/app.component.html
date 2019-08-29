@@ -5,3 +5,24 @@
     <p class="card-text">{{email}}</p>
   </div>
 </div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre del elemento</th>
+      <th scope="col">Símbolo</th>
+      <th scope="col">Número atómico</th>
+      <th scope="col">Peso atómico</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of elements; let e = index">
+      <th scope="row">{{ e+ 1}}</th>
+      <td>{{i.name}}</td>
+      <td>{{i.simbolo}}</td>
+      <td>{{i.natomico}}</td>
+      <td>{{i.patomico}}</td>
+    </tr>
+  </tbody>
+</table>
