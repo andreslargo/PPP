@@ -14,6 +14,8 @@
       <th scope="col">Símbolo</th>
       <th scope="col">Número atómico</th>
       <th scope="col">Peso atómico</th>
+      <th scope="col">Metal de transición</th>
+      <th scope="col">Categoría</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +25,13 @@
       <td>{{i.simbolo}}</td>
       <td>{{i.natomico}}</td>
       <td>{{i.patomico}}</td>
+      <td [ngSwitch]="i.mtran">
+        <ng-container *ngSwitchCase = "1" >Sí</ng-container>
+        <ng-container *ngSwitchCase = "2">No</ng-container>
+      </td>
+      <td [ngStyle]="{'color': i.category === 'Alcalinos' ? 'green' : (i.category ==  'Gases nobles') ? 'blue' : 'black'}">
+        {{i.category}}
+      </td>
     </tr>
   </tbody>
 </table>
